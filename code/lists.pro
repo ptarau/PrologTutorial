@@ -32,6 +32,10 @@ perm_of([X|Xs],Zs):-
 insert(X,Xs,[X|Xs]).
 insert(X,[Y|Xs], [Y|Ys]):-insert(X,Xs,Ys).
 
+% some work with higher order predicates
+
+sum_lists(Xs,Ys,Zs):-maplist(plus,Xs,Ys,Zs).
+
 % all subsets, with findall
 all_subsets_of(Xs,Yss):-
   findall(Ys,subset_of(Xs,Ys),Yss).
@@ -44,4 +48,5 @@ qsort([X|Xs],Rs):-
   qsort(LittleOnes,Firsts),
   qsort(BigOnes,Lasts),
   append(Firsts,[X|Lasts],Rs).
-  
+
+
