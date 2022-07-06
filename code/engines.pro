@@ -31,3 +31,12 @@ findall_(X,G,Xs) :- new_engine(X,G,E), ask(E,Y), collect(E,Y,Xs).
 
 collect(_,no,[]).
 collect(E,the(X),[X|Xs]) :- ask(E,Y), collect(E,Y,Xs).
+
+% an infinite Fibonacci stream with yield
+
+fibo(X) :- new_engine(_,slide_fibo(1,1),E),repeat,ask(E,the(X)).
+
+slide_fibo(X,Y):-Z is X+Y,yield(X),slide_fibo(Y,Z).
+
+% see some advanced uses of engines at:
+% https://github.com/ptarau/AnswerStreamGenerators/blob/master/lazy_streams-0.5.0/prolog/lazy_streams.pl
