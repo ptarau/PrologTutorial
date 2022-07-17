@@ -120,6 +120,16 @@ true.
 [1,1]:1
 true.
 
+?- sat(A * -B + B * -C + C * -A).
+A = B, B = 0,
+C = 1.
+
+
+% Peirce's law
+?- taut(((X -> Y) -> X) -> X).
+true.
+
+
 */
 
 

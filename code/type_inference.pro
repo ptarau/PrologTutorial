@@ -82,11 +82,15 @@ genTypable(s(S),Vs,X,T):-genTypable(X,T,Vs,S,0).
 
 % tests
 
-genLambda(N):-n2s(N,S),genLambda(s(S),X),ppp(X),fail.
+genLambda(N):-n2s(N,S),genLambda(s(S),X),write(X),nl,fail.
 
-genClosed(N):-n2s(N,S),genClosed(s(S),X),ppp(X),fail.
+genClosed(N):-n2s(N,S),genClosed(s(S),X),write(X),nl,fail.
 
 genTyped(N):-n2s(N,S),genClosed(s(S),X),type_of(X,T),
-  writeln(X),writeln(T),nl,
+  write(X),nl,
+  numbervars(T,0,_),
+  write(T),nl,nl,
   fail.
 
+n2s(0,0).
+n2s(SN,s(X)):-SN>0,N is SN-1,n2s(N,X).

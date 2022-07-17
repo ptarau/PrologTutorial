@@ -5,6 +5,7 @@ qs(Qs,Ps):-gen_places(Qs,Ps),place_queens(Qs,Ps,_,_).
 gen_places([],[]).
 gen_places([_|Qs],[_|Ps]):-gen_places(Qs,Ps).
 
+% place_queen(Queen,Column,Updiagonal,Downdiagonal)
 place_queen(I,[I|_],[I|_],[I|_]).
 place_queen(I,[_|Cs],[_|Us],[_|Ds]):-place_queen(I,Cs,Us,Ds).
 
