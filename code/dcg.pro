@@ -1,8 +1,8 @@
-dalle-->subject,verb,object.
+dall_e-->[photo,of],subject,verb,object.
 
 subject-->[a,cat];[a,dog].
 
-verb-->[sitting].
+verb-->[playing].
 
 adjective-->[golden];[shiny].
 
@@ -13,7 +13,7 @@ location-->[moon].
 instrument-->[violin];[trumpet].
 
 go:-
-  dalle(Words,[]),
+  dall_e(Words,[]),
   nl,
   member(W,Words),
   write(W),write(' '),

@@ -12,14 +12,14 @@ about-->actors,[having],event,style,[style].
 
 painter_name-->['Salvador','Dali'].
 painter_name-->['Hieronymus','Bosch'].
-painter_name-->['Russeau'].
+painter_name-->['Rousseau'].
 painter_name-->['Van','Gogh'].
 
 
 event-->[dinner,party].
 style-->[surrealist];[impressionist].
 
-location-->[on,the,moon];[at,the,zoo];[in,a,mirror];[in,a,lagoon].
+location-->[on,the,moon];[at,the,zoo];[in,a,mirror];[in,a,blue,lagoon].
 instrument-->[with,a,violin].
 
 plurality-->[cars];[twin,primes];[chickens].
